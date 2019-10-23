@@ -2,8 +2,8 @@ sudo: required
 services:
   - docker
 
-  before_install:
-    - docker build - cyberdaemon/docker-react - f Dockerfile.dev .
+before_install:
+  - docker build - cyberdaemon/docker-react - f Dockerfile.dev .
 
-  script:
-    - docker run cyberdaemon/docker-react npm test -- --coverage
+script:
+  - docker run cyberdaemon/docker-react npm test -- --coverage
